@@ -1,0 +1,62 @@
+*************1ST QUESTION
+
+#include <iostream>
+
+
+template <class T>
+T maxi (T a, T b)
+{
+    return (a > b? a : b);
+}
+
+int main() {
+    int i = 8;
+    int j = 4;
+    int result;
+
+    char x = 'a';
+    char y = 'b';
+
+
+    result = maxi<int>(5 , j);
+    std::cout << result << std::endl;
+
+    std::cout << maxi<char>('g', 'e') << std::endl;
+
+    std::cout << maxi<float>(7.4, 7.8) << std::endl;
+
+    return 0;
+}
+
+***********2ND QUESTION
+
+#include <iostream>
+
+
+template <class Var>
+class Cla
+{
+    Var a;
+public:
+    Cla(Var z)
+    {
+        a = z;
+    }
+
+public:
+    Var getA() const {
+        return a;
+    }
+
+    void setA(Var a) {
+        Cla::a = a;
+    }
+};
+
+
+int main() {
+    Cla<int> obj(200);
+    obj.setA(200);
+    std:: cout << obj.getA();
+
+}
